@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js Test</title>
+    {% load staticfiles %}
+    <script src="{% static "js/test.js" %}"></script>
+    <script src="{% static "js/jquery-1.11.3.min.js" %}"></script>
+    <link href="{% static "css/test.css" %}" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div id="demo">
+    <ul id="demoimg">
+        <li><img src="{% static "image/01.jpg" %}" /></li>
+        <li><img src="{% static "image/5.jpg" %}" /></li>
+        <li><img src="{% static "image/6.jpg" %}" /></li>
+        <li><img src="{% static "image/010.jpg" %}" /></li>
+        <li><img src="{% static "image/16.jpg" %}" /></li>
+    </ul>
+    <ul id="blue">
+        <li style="background: blue"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div>
+    {{ error }}
+</div>
+<script>
+
+</script>
+</body>
+</html>

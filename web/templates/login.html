@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Check</title>
+    {% load staticfiles %}
+</head>
+<body>
+<form action="/code/checkcode/" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-addon">
+                <img height="30px" src="/static/image/{{ today_str }}/{{ filename }}.png" />
+            </div>
+            <input style="height: 50px" type="text" name="verify_code" class="form-control" placeholder="验证码">
+            <input  type="submit" name="verify_code_key" value="submit" >
+        </div>
+    </div>
+</form>
+</body>
+</html>
